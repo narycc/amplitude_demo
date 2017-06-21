@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .song {
+            background: #f2f2f2;
+            margin-bottom: 20px;
+            border-bottom: 1px solid;
+        }
+
+        .max-img{max-width: 100%;}
+    </style>
+    <link rel="stylesheet" href="./bootstrap.css">
+</head>
+<body>
+<div id="app" class="container">
+    <div id="amplitude-top" class="container-fluid">
+
+        <div class="row" id="amplitude-player">
+
+            <div class="col-md-6 col-sm-12" id="amplitude-left">
+                <img amplitude-song-info="cover_art_url" amplitude-main-song-info="true" class="max-img"/>
+                <div id="player-left-bottom">
+                    <div id="time-container">
+<span class="current-time">
+<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span
+        class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+</span>
+                        <input type="range" class="amplitude-song-slider" amplitude-main-song-slider="true"/>
+                        <span class="duration">
+<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span
+                                class="amplitude-duration-seconds"
+                                amplitude-main-duration-seconds="true"></span>
+</span>
+                    </div>
+                    <div id="control-container">
+                        <div id="repeat-container">
+                            <div class="amplitude-repeat" id="repeat">循环</div>
+                        </div>
+                        <div id="central-control-container">
+                            <div id="central-controls">
+                                <div class="amplitude-prev" id="previous">播放</div>
+                                <div class="amplitude-play-pause" amplitude-main-play-pause="true"
+                                     id="play-pause">暂停
+                                </div>
+                                <div class="amplitude-next" id="next">下一首</div>
+                            </div>
+                        </div>
+                        <div id="shuffle-container">
+                            <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+                        </div>
+                    </div>
+                    <div id="meta-container">
+                        <span amplitude-song-info="name" amplitude-main-song-info="true"
+                              class="song-name"></span>
+                        <div class="song-artist-album">
+                            <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+                            <span amplitude-song-info="album" amplitude-main-song-info="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12" id="amplitude-right">
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing"
+                             src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">Risin' High (feat Raashan Ahmad)</span>
+                        <span class="song-artist">Ancient Astronauts</span>
+                    </div>
+
+                    <span class="song-duration">3:30</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing"
+                             src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">The Gun</span>
+                        <span class="song-artist">Lorn</span>
+                    </div>
+
+                    <span class="song-duration">3:16</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing"
+                             src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">Anvil</span>
+                        <span class="song-artist">Lorn</span>
+                    </div>
+
+                    <span class="song-duration">3:32</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="3">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing" src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">I Came Running</span>
+                        <span class="song-artist">Ancient Astronauts</span>
+                    </div>
+
+                    <span class="song-duration">3:30</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="4">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing" src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">First Snow</span>
+                        <span class="song-artist">Emancipator</span>
+                    </div>
+
+                    <span class="song-duration">5:12</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="5">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing" src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">Terrain</span>
+                        <span class="song-artist">pg.lost</span>
+                    </div>
+
+                    <span class="song-duration">5:29</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="6">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing" src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">Vorel</span>
+                        <span class="song-artist">Russian Circles</span>
+                    </div>
+
+                    <span class="song-duration">5:29</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="7">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing" src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">Intro / Sweet Glory</span>
+                        <span class="song-artist">Jimkata</span>
+                    </div>
+
+                    <span class="song-duration">2:39</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="8">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing" src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">Offcut #6</span>
+                        <span class="song-artist">Little People</span>
+                    </div>
+
+                    <span class="song-duration">1:00</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="9">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing" src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">Dusk To Dawn</span>
+                        <span class="song-artist">Emancipator</span>
+                    </div>
+
+                    <span class="song-duration">5:25</span>
+                </div>
+                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="10">
+                    <div class="song-now-playing-icon-container">
+                        <div class="play-button-container">
+                        </div>
+                        <img class="now-playing" src="./img/play.svg"/>
+                    </div>
+                    <div class="song-meta-data">
+                        <span class="song-title">Anthem</span>
+                        <span class="song-artist">Emancipator</span>
+                    </div>
+
+                    <span class="song-duration">5:40</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+<script src="./amplitude.js"></script>
+<script type="text/javascript">
+
+  Amplitude.init({
+    "songs": [
+      {
+        "name": "Risin' High (feat Raashan Ahmad)",
+        "artist": "Ancient Astronauts",
+        "album": "We Are to Answer",
+        "url": "https://521dimensions.com/songs/Vorel-RussianCircles.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/we-are-to-answer.jpg"
+      },
+      {
+        "name": "The Gun",
+        "artist": "Lorn",
+        "album": "Ask The Dust",
+        "url": "https://521dimensions.com/songs/ICameRunning-AncientAstronauts.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/ask-the-dust.jpg"
+      },
+      {
+        "name": "Anvil",
+        "artist": "Lorn",
+        "album": "Anvil",
+        "url": "https://521dimensions.com/songs/LORN - ANVIL.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/anvil.jpg"
+      },
+      {
+        "name": "I Came Running",
+        "artist": "Ancient Astronauts",
+        "album": "We Are to Answer",
+        "url": "https://521dimensions.com/songs/ICameRunning-AncientAstronauts.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/we-are-to-answer.jpg"
+      },
+      {
+        "name": "First Snow",
+        "artist": "Emancipator",
+        "album": "Soon It Will Be Cold Enough",
+        "url": "https://521dimensions.com/songs/FirstSnow-Emancipator.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/soon-it-will-be-cold-enough.jpg"
+      },
+      {
+        "name": "Terrain",
+        "artist": "pg.lost",
+        "album": "Key",
+        "url": "https://521dimensions.com/songs/Terrain-pglost.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/key.jpg"
+      },
+      {
+        "name": "Vorel",
+        "artist": "Russian Circles",
+        "album": "Guidance",
+        "url": "https://521dimensions.com/songs/Vorel-RussianCircles.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/guidance.jpg"
+      },
+      {
+        "name": "Intro / Sweet Glory",
+        "artist": "Jimkata",
+        "album": "Die Digital",
+        "url": "https://521dimensions.com/songs/IntroSweetGlory-Jimkata.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/die-digital.jpg"
+      },
+      {
+        "name": "Offcut #6",
+        "artist": "Little People",
+        "album": "We Are But Hunks of Wood Remixes",
+        "url": "https://521dimensions.com/songs/Offcut6-LittlePeople.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/we-are-but-hunks-of-wood.jpg"
+      },
+      {
+        "name": "Dusk To Dawn",
+        "artist": "Emancipator",
+        "album": "Dusk To Dawn",
+        "url": "https://521dimensions.com/songs/DuskToDawn-Emancipator.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/from-dusk-to-dawn.jpg"
+      },
+      {
+        "name": "Anthem",
+        "artist": "Emancipator",
+        "album": "Soon It Will Be Cold Enough",
+        "url": "https://521dimensions.com/songs/Anthem-Emancipator.mp3",
+        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/soon-it-will-be-cold-enough.jpg"
+      }
+    ]
+  });
+</script>
+</html>
+
+
+

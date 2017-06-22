@@ -3,3 +3,10 @@
 .idea/amplitude.iml
 .idea/modules.xml
 .idea/workspace.xml
+.idea/vcs.xml
+.idea/amplitude_demo.iml
+node_modules/amplitudejs/dist/amplitude.js
+node_modules/amplitudejs/dist/amplitude.min.js
+node_modules/amplitudejs/LICENSE
+
+node_modules/

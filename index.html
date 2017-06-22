@@ -2,19 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>扣钉骑士的专辑_Amplitude 使用实例</title>
     <style>
-        .song {
-            background: #f2f2f2;
-            margin-bottom: 20px;
-            border-bottom: 1px solid;
-        }
+        .banner{
+            background-color: #6f5499; padding: 30px 0; color:#fff; margin-bottom: 20px;}
 
-        .max-img{max-width: 100%;}
+        .banner .container{padding: 0 60px;}
+        .banner p{color:#cdbfe3;}
+        .song {
+            background: #cdbfe3;;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+        .song .song-title{margin: 0 12px;}
+        .song .song-artist {text-align: right;}
+
+        .max-img {
+            max-width: 100%;
+        }
+        .time-container,.control-container{padding: 20px;}
+        .control-container .text{display: inline-block;vertical-align: middle;}
     </style>
-    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <body>
+
+<div class="banner">
+    <div class="container">
+        <h1>扣钉骑士</h1>
+        <p>一个孤独码农的硅谷音乐境界</p>
+    </div>
+</div>
 <div id="app" class="container">
     <div id="amplitude-top" class="container-fluid">
 
@@ -23,192 +42,102 @@
             <div class="col-md-6 col-sm-12" id="amplitude-left">
                 <img amplitude-song-info="cover_art_url" amplitude-main-song-info="true" class="max-img"/>
                 <div id="player-left-bottom">
-                    <div id="time-container">
-<span class="current-time">
-<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span
-        class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
-</span>
-                        <input type="range" class="amplitude-song-slider" amplitude-main-song-slider="true"/>
-                        <span class="duration">
-<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span
-                                class="amplitude-duration-seconds"
-                                amplitude-main-duration-seconds="true"></span>
-</span>
-                    </div>
-                    <div id="control-container">
-                        <div id="repeat-container">
-                            <div class="amplitude-repeat" id="repeat">循环</div>
+                    <div id="time-container" class="row time-container">
+                        <div class="current-time">
+                            <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+                        <span> / </span>
+                            <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds"
+                                                                                                                          amplitude-main-duration-seconds="true"></span>
                         </div>
-                        <div id="central-control-container">
+                        <div><input type="range" class="amplitude-song-slider " amplitude-main-song-slider="true"/></div>
+
+                    </div>
+
+                    <div id="control-container" class="row control-container">
+
+                        <div id="central-control-container" class="col-sm-10">
                             <div id="central-controls">
-                                <div class="amplitude-prev" id="previous">播放</div>
-                                <div class="amplitude-play-pause" amplitude-main-play-pause="true"
-                                     id="play-pause">暂停
+                                <div class="amplitude-prev col-xs-4" id="previous">
+                                    <i class="iconfont icon-shangyiqu"></i>
+                                    <span class="text">上一首</span>
                                 </div>
-                                <div class="amplitude-next" id="next">下一首</div>
+                                <div class="amplitude-play-pause col-xs-4" amplitude-main-play-pause="true"
+                                     id="play-pause">
+                                    <i class="iconfont icon-bofang"></i>
+                                    <span class="text">播放/暂停</span>
+                                </div>
+                                <div class="amplitude-next col-xs-4" id="next">
+                                    <i class="iconfont icon-xiayiqu"></i>
+                                    <span class="text">下一首</span>
+                                </div>
                             </div>
                         </div>
-                        <div id="shuffle-container">
-                            <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+
+                        <div id="repeat-container" class="col-sm-2">
+                            <div class="amplitude-repeat" id="repeat">
+                                <i class="iconfont icon-xunhuan"></i>
+                                <span class="text">循环</span>
+                            </div>
                         </div>
+                        <!--<div id="shuffle-container" class="col-sm-3">
+                            <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle">
+                                <button class="btn btn-primary">随机播放</button>
+                            </div>
+                        </div>-->
                     </div>
                     <div id="meta-container">
-                        <span amplitude-song-info="name" amplitude-main-song-info="true"
-                              class="song-name"></span>
+                        <p>曲名：<span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span></p>
                         <div class="song-artist-album">
-                            <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
-                            <span amplitude-song-info="album" amplitude-main-song-info="true"></span>
+                            <p>作者：<span amplitude-song-info="artist" amplitude-main-song-info="true"></span></p>
+                            <p>专辑：<span amplitude-song-info="album" amplitude-main-song-info="true"></span></p>
+                            <p>介绍：<span amplitude-song-info="describe" amplitude-main-song-info="true"></span></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12" id="amplitude-right">
+                <div class="jumbotron">
+
+                    <p>扣钉骑士，他所有对外的网名都是扣钉骑士，英文对外yarmyarch，是个极具传奇色彩的码农。</p>
+                    <p>他从小酷爱游戏音乐，对音乐有特殊的天分，不懂音律，但是能根据自己听到的在键盘上找到音，仅凭借自己的兴趣爱好，使用编曲软件进行编曲。
+                        大学毕业后，在百度从事前端开发工程师，升级至高级开发工程师之后，辞职成为一个自由职业者。然后开始了一个人自行车环游中国的骑行，中间经历不少艰辛。然后开始骑行东南亚。骑行过程中，一边接活干。
+                    </p>
+                    <p>最后，经过一番精心准备获得了Google 前端开发的职位，现在就只于旧金山Uber总部。喜欢户外和摄影，从来都是自备户外装备，自己组装自行车，摄影也是根据自己的感觉来。拍出了不少美丽的风景。这里的三首曲子，都是扣钉骑士自学创作出来的。可圈可点。</p>
+
+                    <p><a href="http://yarmyarch.com">他的个人网站</a></p>
+                    <p><a href="http://music.163.com/#/artist?id=12110080">他的网易云音乐</a></p>
+                    <p><a href="http://weibo.com/yarmyarch">他的微博</a></p>
+                    <p><a href="https://www.linkedin.com/in/yujia-luo-49b15486/">他的linkedin</a></p>
+                    <p>他的更多讯息，等待你去挖掘。</p>
+                </div>
+
+
                 <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
                     <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing"
-                             src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">Risin' High (feat Raashan Ahmad)</span>
-                        <span class="song-artist">Ancient Astronauts</span>
+                        <i class="iconfont icon-bofang"></i>
+                        <span class="song-title">Finding Jane</span>
+                        <a class="song-artist" target="_blank" href="http://weibo.com/yarmyarch">扣钉骑士</a>
                     </div>
 
-                    <span class="song-duration">3:30</span>
                 </div>
                 <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
                     <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing"
-                             src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">The Gun</span>
-                        <span class="song-artist">Lorn</span>
+                        <i class="iconfont icon-bofang"></i>
+                        <span class="song-title">南风不竞</span>
+                        <a class="song-artist" target="_blank" href="http://weibo.com/yarmyarch">扣钉骑士</a>
                     </div>
 
-                    <span class="song-duration">3:16</span>
                 </div>
                 <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
                     <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing"
-                             src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">Anvil</span>
-                        <span class="song-artist">Lorn</span>
+                        <i class="iconfont icon-bofang"></i>
+                        <span class="song-title">风至初夏</span>
+                        <a class="song-artist" target="_blank" href="http://weibo.com/yarmyarch">扣钉骑士</a>
                     </div>
 
-                    <span class="song-duration">3:32</span>
                 </div>
-                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="3">
-                    <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing" src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">I Came Running</span>
-                        <span class="song-artist">Ancient Astronauts</span>
-                    </div>
 
-                    <span class="song-duration">3:30</span>
-                </div>
-                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="4">
-                    <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing" src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">First Snow</span>
-                        <span class="song-artist">Emancipator</span>
-                    </div>
 
-                    <span class="song-duration">5:12</span>
-                </div>
-                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="5">
-                    <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing" src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">Terrain</span>
-                        <span class="song-artist">pg.lost</span>
-                    </div>
-
-                    <span class="song-duration">5:29</span>
-                </div>
-                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="6">
-                    <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing" src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">Vorel</span>
-                        <span class="song-artist">Russian Circles</span>
-                    </div>
-
-                    <span class="song-duration">5:29</span>
-                </div>
-                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="7">
-                    <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing" src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">Intro / Sweet Glory</span>
-                        <span class="song-artist">Jimkata</span>
-                    </div>
-
-                    <span class="song-duration">2:39</span>
-                </div>
-                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="8">
-                    <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing" src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">Offcut #6</span>
-                        <span class="song-artist">Little People</span>
-                    </div>
-
-                    <span class="song-duration">1:00</span>
-                </div>
-                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="9">
-                    <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing" src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">Dusk To Dawn</span>
-                        <span class="song-artist">Emancipator</span>
-                    </div>
-
-                    <span class="song-duration">5:25</span>
-                </div>
-                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="10">
-                    <div class="song-now-playing-icon-container">
-                        <div class="play-button-container">
-                        </div>
-                        <img class="now-playing" src="./img/play.svg"/>
-                    </div>
-                    <div class="song-meta-data">
-                        <span class="song-title">Anthem</span>
-                        <span class="song-artist">Emancipator</span>
-                    </div>
-
-                    <span class="song-duration">5:40</span>
-                </div>
             </div>
 
         </div>
@@ -216,89 +145,41 @@
     </div>
 
 </div>
+
+<div class="container" style="margin-top: 40px; text-align: center;margin-bottom: 20px;">
+    <p>本页面使用Amplitube 实现，使用请<a href="https://github.com/521dimensions/amplitudejs">点击查看</a></p>
+</div>
 </body>
-<script src="./amplitude.js"></script>
+<script src="./js/amplitude.js"></script>
 <script type="text/javascript">
 
   Amplitude.init({
     "songs": [
       {
-        "name": "Risin' High (feat Raashan Ahmad)",
-        "artist": "Ancient Astronauts",
-        "album": "We Are to Answer",
-        "url": "https://521dimensions.com/songs/Vorel-RussianCircles.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/we-are-to-answer.jpg"
+        "name": "Finding Jane",
+        "artist": "扣钉骑士",
+        "album": "Finding Jane",
+        "describe": "【他看见鱼儿飞过山涧，苍鹰跃出海面，山林里贝壳满地，沙漠里秋棠盛开，而她在他身边】作曲者在游玩的时候写下的诗句，这首曲子也是其为歆慕的女子而创作的。",
+        "url": "./music/FindingJane.mp3",
+        "cover_art_url": "./img/findingJane.JPG"
       },
       {
-        "name": "The Gun",
-        "artist": "Lorn",
-        "album": "Ask The Dust",
-        "url": "https://521dimensions.com/songs/ICameRunning-AncientAstronauts.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/ask-the-dust.jpg"
+        "name": "南风不竞",
+        "artist": "扣钉骑士",
+        "album": "Finding Jane",
+        "describe":"或许是作曲者很长一段时间都在听台湾霹雳剧的配曲吧，浓浓的武侠风格，或许是太喜欢风了吧，反正我在曲子中没有听到任何关于风的元素",
+        "url": "./music/扣钉骑士 - 南风不竞.mp3",
+        "cover_art_url": "./img/noWind.jpg"
       },
       {
-        "name": "Anvil",
-        "artist": "Lorn",
-        "album": "Anvil",
-        "url": "https://521dimensions.com/songs/LORN - ANVIL.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/anvil.jpg"
-      },
-      {
-        "name": "I Came Running",
-        "artist": "Ancient Astronauts",
-        "album": "We Are to Answer",
-        "url": "https://521dimensions.com/songs/ICameRunning-AncientAstronauts.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/we-are-to-answer.jpg"
-      },
-      {
-        "name": "First Snow",
-        "artist": "Emancipator",
-        "album": "Soon It Will Be Cold Enough",
-        "url": "https://521dimensions.com/songs/FirstSnow-Emancipator.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/soon-it-will-be-cold-enough.jpg"
-      },
-      {
-        "name": "Terrain",
-        "artist": "pg.lost",
-        "album": "Key",
-        "url": "https://521dimensions.com/songs/Terrain-pglost.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/key.jpg"
-      },
-      {
-        "name": "Vorel",
-        "artist": "Russian Circles",
-        "album": "Guidance",
-        "url": "https://521dimensions.com/songs/Vorel-RussianCircles.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/guidance.jpg"
-      },
-      {
-        "name": "Intro / Sweet Glory",
-        "artist": "Jimkata",
-        "album": "Die Digital",
-        "url": "https://521dimensions.com/songs/IntroSweetGlory-Jimkata.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/die-digital.jpg"
-      },
-      {
-        "name": "Offcut #6",
-        "artist": "Little People",
-        "album": "We Are But Hunks of Wood Remixes",
-        "url": "https://521dimensions.com/songs/Offcut6-LittlePeople.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/we-are-but-hunks-of-wood.jpg"
-      },
-      {
-        "name": "Dusk To Dawn",
-        "artist": "Emancipator",
-        "album": "Dusk To Dawn",
-        "url": "https://521dimensions.com/songs/DuskToDawn-Emancipator.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/from-dusk-to-dawn.jpg"
-      },
-      {
-        "name": "Anthem",
-        "artist": "Emancipator",
-        "album": "Soon It Will Be Cold Enough",
-        "url": "https://521dimensions.com/songs/Anthem-Emancipator.mp3",
-        "cover_art_url": "https://521dimensions.com/img/open-source/amplitudejs/album-art/soon-it-will-be-cold-enough.jpg"
+        "name": "风至初夏",
+        "artist": "扣钉骑士",
+        "album": "Finding Jane",
+        "describe":"曲子的开头有种流浪的孤寂感，随后的打击乐给人一种回忆的感觉，作曲者在向人传达他丰富多彩的故事吗？中国元素的加入，是加了点思乡的感觉吗？最后的那欢快的钢琴是想起了美好的东西吗？",
+        "url": "./music/扣钉骑士 - 风至初夏.mp3",
+        "cover_art_url": "./img/summerWind.jpg"
       }
+
     ]
   });
 </script>

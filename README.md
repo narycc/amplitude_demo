@@ -26,9 +26,17 @@ Amplitude.js is a lightweight JavaScript library that allows you to control the 
 
 ## Demo
 <p align="center">
+
+
+
+<a href="http://yarmyarch.com/music" target="_blank">
+		<img src="http://yarmyarch.com/orange/wp-content/uploads/2017/06/demo.png" alt="MIT License" width="600">
+	</a><br />
+	
 	<a href="https://521dimensions.com/open-source/amplitudejs" target="_blank">
 		<img src="https://521dimensions.com/img/open-source/amplitudejs/AmplitudeDemo.jpg" alt="MIT License" width="600">
 	</a><br />
+	
 	Click the image above to go to the demo site or <a href="https://521dimensions.com/open-source/amplitudejs" target="_blank">click here</a>.
 </p>
 
